@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: spotify-token
+Version: 0.1.2
+Summary: Python wrapper for Spotify Webplayer access token
+Home-page: https://github.com/enriquegh/spotify-webplayer-token
+Author: Enrique Gonzalez
+Author-email: egonzalezh94@gmail.com
+License: MIT
+Keywords: wrapper,spotify
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Dist: requests (>=2.0)
+Requires-Dist: beautifulsoup4 (>=4.8.1)
+Requires-Dist: lxml (>=4.4.1)
+
+==============================
+spotify-webplayer-accesstoken
+==============================
+
+Utility script to get Spotify's web player access token which has more permissions than the normal one that can be obtained through the Spotify API.
+
+This was inspired by `kopiro <https://github.com/kopiro>`_'s work on the same thing on Node (`link <https://github.com/kopiro/node-spotify-webplayer-accesstoken>`_).
+
+Installing
+============ 
+
+::
+
+    pip install spotify_token
+
+Usage
+============
+An access token can be obtained by running the following::
+
+    import spotify_token as st
+
+    data = st.start_session("myusername","mypassword")
+    access_token = data[0]
+    expiration_date = data[1]
+
+License
+============
+
+This project is licensed under the MIT License - see the `LICENSE <LICENSE>`_ file for details
+
+
